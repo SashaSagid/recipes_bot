@@ -173,7 +173,7 @@ def search_recipe(message, regular):
 def give_advice(message):
     chat_id = message.chat.id
     # Отправляем запрос к API для поиска рецептов (БЕЗ цензуры)
-    response = requests.get(FGA_UNCENSORED_API_URL)
+    response = requests.get(FGA_CENSORED_API_URL)
     advice = None
 
     if response.status_code == 200:
