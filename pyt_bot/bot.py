@@ -73,7 +73,7 @@ def send_welcome(message):
     # global chat_id
     chat_id = message.chat.id
     
-    bot.send_message(chat_id, "Хэлоу, я бот-объебот (в смысле объедение-бот), помогаю в поиске рецептов блюд и еще могу дать совет", reply_markup=markup)
+    bot.send_message(chat_id, "Хэлоу, яобъедение-бот, помогаю в поиске рецептов блюд и еще могу дать совет", reply_markup=markup)
 
 # Обработчик текстовых сообщений
 @bot.message_handler(func=lambda message: True)
@@ -125,7 +125,7 @@ def handle_message(message):
     elif message.text == "Дай-ка лучше мне совет":
         give_advice(message)
     else:
-        bot.send_message(chat_id, "Похоже, ты указал 1 ингредиент ну или написал отсебятину. Посмотри еще раз сообщение выше и сделай как сказали, блеать!")
+        bot.send_message(chat_id, "Похоже, ты указал 1 ингредиент ну или написал отсебятину. Посмотри еще раз сообщение выше и сделай как сказали!")
 
 # Функция поиска рецептов. regular сделал для обработки кейса, когда рецепты по ингредиентам не найдены и мы ищем без их учета (URL меняем)
 def search_recipe(message, regular):
